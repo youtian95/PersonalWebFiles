@@ -25,3 +25,23 @@
         hexo generate
         hexo clean
         hexo deploy
+
+## 发布文章
+1. 发布文章
+
+        hexo new post "test new post"
+1. source\_posts\test-new-post.md 用编辑器修改.md文章
+1. 修改主页的相应文本内容： themes\Theme2\layout\index.ejs，同时修改其他网页source\_posts\others-index.md
+1. 
+        hexo generate
+1. 
+        hexo clean
+1. 
+        hexo deploy
+
+## 删除文章
+1. source\_posts\test-new-post.md 删除文件
+1. 
+        hexo clean
+1.
+        hexo deploy
