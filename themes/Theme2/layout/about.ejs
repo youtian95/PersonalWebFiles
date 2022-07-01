@@ -1,0 +1,43 @@
+<!-- 关于自己的模板 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>page.title</title>
+    <meta charset="utf-8">
+
+    <!-- 引入配置文件 -->
+    <%- css('css/main.css') %>
+
+</head>
+<body>
+
+    <div>
+
+        <!-- 引入导航 -->
+        <nav>
+            <%- partial('partial/nav.ejs') %>
+        </nav>
+
+        <!-- 引入目录 -->
+        <aside>
+            <%- partial('partial/aside.ejs', {post: page}) %>
+        </aside>
+
+        <!-- 正文 -->
+        <div id="content">
+            <%- page.content %>
+        </div>
+
+        
+        <!-- 引入footer -->
+        <footer>
+            <%- partial('partial/footer.ejs') %>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+

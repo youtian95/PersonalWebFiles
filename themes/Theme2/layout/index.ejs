@@ -1,0 +1,64 @@
+<!-- 首页 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%- theme.title %></title>
+    <meta charset="utf-8">
+
+    <!-- 引入配置文件 -->
+    <%- css('css/main.css') %>
+    
+</head>
+<body>
+
+    <div>
+
+        <!-- 引入导航 -->
+		<nav>
+			<%- partial('partial/nav.ejs') %>
+		</nav>
+        
+
+        <!-- 正文 -->
+        <div id="homepage">
+        	<section id="research">
+				<h1>研究</h1>
+				<ul>
+				<li>建筑群的抗震韧性评价</li>
+				<li>基础设施震后恢复模拟</li>
+				<li>基于震后变形条件的建筑损失快速评价理论</li>
+				</ul>
+			</section>
+
+			<a href="<%- url_for('2021/05/16/others-index') %>">
+				<section id="others">
+					<h1>整理</h1>
+					<h2>现有研究</h2>
+					<h2>小技巧/知识</h2>
+				</section>
+			</a>
+				
+			<section id="programs">
+				<h1>程序</h1>
+				<ul>
+				<li>滞回曲线处理工具</li>
+				<li>简化的建筑层剪切模型建模和地震损失分析</li>
+				</ul>
+			</section>
+        </div>
+
+        <!-- 引入footer -->
+		<footer>
+			<%- partial('partial/footer.ejs') %>
+		</footer>
+        
+    </div>
+
+    <!-- 引入 js 文件 -->
+    <%- js('js/main.js') %>
+
+</body>
+</html>
+
+

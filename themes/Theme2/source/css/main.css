@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+}
+
+html, body {
+    height: 100%;
+}
+
+/*导航栏内容设置--------------------------------*/
+nav {
+    height: 50px;
+    width: 100%;
+    background: rgb(50, 50, 50);
+}
+nav ul {
+	padding-left: 200px;
+    list-style: none;
+}
+nav ul li a:link, nav ul li a:visited, nav ul li a:active {
+	font-family: "微软正黑体";
+    font-size: 20px;
+    height: 40px;
+	padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    float: left;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+nav ul li a:hover {
+	background-color: rgb(100, 100, 100);
+}
+
+/*左侧导航栏内容设置--------------------------------*/
+aside {
+	line-height: 1.4;
+	font-family: "微软正黑体";
+    font-size: 20px;
+    height: 40px;
+    float: left;
+    width: 500px;
+    position: fixed;
+}
+aside div {
+	margin-top: 20px;
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px #888888;
+    float: right;
+    padding: 20px;
+    width: 300px;
+    background-color: rgb(250, 250, 250);
+    overflow-y: auto;
+	max-height: 500px;
+}
+aside div ol {
+    list-style: none;
+}
+aside div ol li a:link, aside div ol li a:visited, aside div ol li a:active {
+    text-decoration: none;
+    color: rgb(0, 140, 186);
+}
+aside div ol li a:hover {
+	color: rgb(100, 100, 100);
+}
+li.toc-level-1 {
+	padding-left: 10px;
+    font-size: 20px;
+}
+li.toc-level-2 {
+	padding-left: 20px;
+    font-size: 18px;
+}
+li.toc-level-3 {
+	padding-left: 30px;
+    font-size: 16px;
+}
+
+/*文章内容设置--------------------------------*/
+#content {
+    float: left;
+    margin-left: 500px;
+    padding: 50px;
+}
+
+#content li {
+	margin-left: 20px;
+}
+
+/*主页内容设置--------------------------------*/
+#homepage {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#homepage a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#homepage section {
+	border-style: none;
+	border-radius: 20px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 300px;
+	padding: 20px;
+    background: rgb(200,200,200,0.3);
+}
+
+#homepage section:hover {
+	box-shadow: 2px 2px 2px #888888;
+}
+
+#homepage h1 {
+    font-size: 30px;
+}
+#homepage h2 {
+    font-size: 20px;
+}
+#homepage h3 {
+    font-size: 18px;
+}
+
+#homepage li {
+	margin-left: 20px;
+}
+
+
+/*尾注内容设置--------------------------------*/
+footer {
+	margin-top: 300px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	float: left;
+	width: 100%;
+	border-top-style: solid;
+	border-color: rgb(200,200,200,0.3);
+	text-align: center;
+}
