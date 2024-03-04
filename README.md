@@ -44,7 +44,7 @@
 1. `hexo clean`  
 1. `hexo deploy`  
 
-## （4）修改PersonalWebFiles仓库
+## (5) 修改PersonalWebFiles仓库
 1. 将新文件覆盖本地PersonalWebFiles仓库中的文件  
         `cd ..\PersonalWebFiles\`
 1. 同步远程PersonalWebFiles仓库  
