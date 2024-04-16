@@ -7,7 +7,11 @@
 - 本地电脑生成ssh，github账户添加ssh
 - 安装node.js
 - 安装hexo  
-`npm install -g hexo-cli`
+        `npm install -g hexo-cli`
+- 安装其他工具
+        `npm install --save hexo-pdf`
+        `npm install --save hexo-hide-posts`
+        `npm install --save hexo-deployer-git `
 
 ## 使用步骤
 
@@ -20,14 +24,11 @@
         `git checkout -b master origin/master`
 
 ### 2. 搭建网站
-2. 在本地电脑创建 youtian95.github.io 文件夹
-3. Hexo建站  
+1. 在本地电脑创建 youtian95.github.io 文件夹
+1. Hexo建站  
         `hexo init`
-4. 安装 hexo-deployer-git  
-        `npm install hexo-deployer-git --save`
-        
-5. 复制这个repo的文件覆盖原来的文件夹中的文件，包括 _config.yml，source，themes
-6. 部署到github  
+1. 复制这个repo的文件替换原来的文件夹中的文件，包括 _config.yml，source，themes，scaffolds
+1. 部署到github  
         `hexo generate`  
         `hexo clean`  
         `hexo deploy`  
