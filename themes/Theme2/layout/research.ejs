@@ -1,0 +1,74 @@
+<!-- 研究页面的模板 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%- page.title %></title>
+    <meta charset="utf-8">
+
+    <!-- 引入配置文件 -->
+    <%- css('css/main.css') %>
+
+</head>
+
+<% function mapName(item) { %>
+	<% return item.name;  %>
+<% } %>
+
+<body>
+
+    <div>
+
+        <!-- 引入导航 -->
+        <nav>
+            <%- partial('partial/nav.ejs') %>
+        </nav>
+
+        <!-- 正文 -->
+        <div id="content_noTOC">
+            <h1>研究</h1>
+            <hr>
+            <!-- 遍历有'研究','建筑群'分类的文章 -->
+            <h2>建筑群</h2>
+            <hr>
+            <ul>
+                <% site.categories.findOne({name: '研究'}).posts.sort('date', -1).forEach(function(post) { %>
+                    <% post.categories.each( function(category) { %> 
+                        <% if (category.name == '建筑群') { %>
+                            <a href="<%- url_for(post.path) %>" class="list_item_no_link">
+                                <li><%- post.title %> </li>
+                            </a>
+                        <% } %>
+                    <% }); %>
+                <% }); %>
+            </ul>
+            <!-- 遍历有'研究','单体建筑'分类的文章 -->
+            <h2>单体建筑</h2>
+            <hr>
+            <ul>
+                <% site.categories.findOne({name: '研究'}).posts.sort('date', -1).forEach(function(post) { %>
+                    <% post.categories.each( function(category) { %> 
+                        <% if (category.name == '单体建筑') { %>
+                            <a href="<%- url_for(post.path) %>" class="list_item_no_link">
+                                <li><%- post.title %> </li>
+                            </a>
+                        <% } %>
+                    <% }); %>
+                <% }); %>
+            </ul>
+
+            <%- page.content %>
+        </div>
+
+        
+        <!-- 引入footer -->
+        <footer>
+            <%- partial('partial/footer.ejs') %>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
