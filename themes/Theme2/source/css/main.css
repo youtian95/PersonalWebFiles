@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     line-height: 150%;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 html, body {
@@ -49,7 +54,7 @@ aside div {
 	box-shadow: 2px 2px 2px #888888;
     float: right;
     padding: 20px;
-    width: fit-content;
+    width: 40%;
     background-color: rgb(250, 250, 250);
     overflow-y: auto;
 	max-height: 500px;
@@ -92,6 +97,15 @@ li.toc-level-3 {
     text-decoration: none;
     color: inherit;
 }
+h1 {
+    line-height: 250%;
+}
+h2 {
+    line-height: 250%;
+}
+h3 {
+    line-height: 200%;
+}
 
 /*文章内容设置--------------------------------*/
 #content_noTOC {
@@ -106,6 +120,17 @@ li.toc-level-3 {
 #content_noTOC .list_item_no_link {
     text-decoration: none;
     color: inherit;
+}
+/* 代码块设置 */
+#content pre, code {
+    background: #f5f5f5;
+    font-family: Consolas;
+    white-space: pre-wrap;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #333;
+    border: 0.5px solid #ccc;
 }
 
 /*主页内容设置--------------------------------*/

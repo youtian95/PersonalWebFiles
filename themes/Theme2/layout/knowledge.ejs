@@ -30,14 +30,14 @@
             <h1>整理</h1>
             <hr>
             <!-- 遍历有'整理','建筑群'分类的文章 -->
-            <!-- <h2>建筑群</h2> -->
-            <!-- <hr> -->
+            <h2>地震模拟</h2>
+            <hr>
             <ul>
                 <% var allposts = site.categories.findOne({name: '整理'});  %>
                 <% if (typeof(allposts) != "undefined") { %>
                     <% allposts.posts.sort('date', -1).forEach(function(post) { %>
                         <% post.categories.each( function(category) { %> 
-                            <% if (category.name == '建筑群') { %>
+                            <% if (category.name == '地震模拟') { %>
                                 <a href="<%- url_for(post.path) %>" class="list_item_no_link">
                                     <li><%- post.title %> </li>
                                 </a>
